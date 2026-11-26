@@ -14,18 +14,7 @@
 @import url("https://googleapis.com");
 @import url('https://googleapis.com');
 
-/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
-
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com */
 
 html {
   color: #222;
@@ -71,10 +60,6 @@ textarea {
   resize: vertical;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
 *,
 *::before,
 *::after {
@@ -116,9 +101,9 @@ body {
 }
 
 header {
-  display: flex-end;
+  display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 1rem 5rem;
   background-color: var(--primary-color);
 }
@@ -141,7 +126,7 @@ header {
   -webkit-text-fill-color: transparent;
 }
 
-.section-1 {
+.hero {
   background-color: var(--primary-color);
   display: grid;
   position: relative;
@@ -149,7 +134,7 @@ header {
   padding: 2rem 5rem 0 5rem;
 }
 
-.gem-container {
+.petal-orbit {
   position: absolute;
   top: 80%;
   left: 60%;
@@ -158,7 +143,7 @@ header {
   height: 100%;
 }
 
-.gem {
+.petal {
   cursor: pointer;
   position: absolute;
   z-index: 3;
@@ -166,29 +151,28 @@ header {
   background-repeat: no-repeat;
 }
 
-.red {
+.petal-1 {
   width: 120px;
   height: 80px;
   background-image: url('https://pngall.com');
   transform: translate(-70%, -190%) rotate(30deg);
 }
 
-.orange {
+.petal-2 {
   width: 97px;
   height: 120px;
   background-image: url('https://pngall.com');
   transform: translate(230%, 24%) rotate(-20deg);
 }
 
-.pink {
+.petal-3 {
   width: 70px;
   height: 60px;
   background-image: url('https://pngall.com');
   transform: translate(-150%, 150%);
-  background-size: contain;
 }
 
-.slogan {
+.brand-hero {
   position: absolute;
   top: 50%;
   left: 60%;
@@ -202,18 +186,18 @@ header {
   font-style: normal;
 }
 
-.home-img-container {
+.bloom-stage {
   position: relative;
   overflow: hidden;
   min-height: 400px;
   z-index: 2;
 }
 
-.home-img-wrapper {
+.bloom-flip {
   perspective: 1000px;
 }
 
-.home-img {
+.bloom-emblem {
   width: 35%;
   height: 70%;
   position: relative;
@@ -221,14 +205,8 @@ header {
   transition: transform 0.5s ease;
 }
 
-.home-img-container:hover .home-img {
+.bloom-stage:hover .bloom-emblem {
   transform: rotateY(360deg);
-}
-
-.nav-items {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
 }
 
 .nav-link {
@@ -305,72 +283,18 @@ header {
     margin: 0.5rem 0;
   }
 
-  .menu-toggle {
-    display: none;
-  }
-
-  .bx-menu {
-    display: none;
-  }
-
-  .show-bx {
-    display: none;
-  }
-
+  .menu-toggle,
+  .bx-menu,
+  .show-bx,
   .hide-bx {
     display: none;
   }
 
-  .slogan {
+  .brand-hero {
     display: none;
   }
 
-  .home-img {
-    width: auto;
-    max-width: 90%;
-    height: auto;
-    max-height: 40vh;
-  }
-
-  .home-img-container:hover .home-img {
-    transform: rotateY(0deg);
-  }
-
-  .gem-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .red,
-  .orange,
-  .pink {
-    position: absolute;
-  }
-
-  .red {
-    width: 70px;
-    height: 50px;
-    transform: translate(-90%, -290%) rotate(30deg);
-  }
-
-  .orange {
-    width: 70px;
-    height: 50px;
-    transform: translate(170%, -50%) rotate(-20deg);
-  }
-
-  .pink {
-    width: 60px;
-    height: 30px;
-    transform: translate(-150%, 150%) rotate(0deg);
-  }
-
-  .home-img-container {
+  .bloom-stage {
     position: relative;
     overflow: hidden;
     min-height: 100vh;
@@ -381,7 +305,7 @@ header {
     justify-content: center;
   }
 
-  .home-img-wrapper {
+  .bloom-flip {
     perspective: 1000px;
     display: flex;
     justify-content: center;
@@ -389,58 +313,91 @@ header {
     height: 100%;
   }
 
-  .home-img {
+  .bloom-emblem {
     width: auto;
+    max-width: 90%;
     height: 100%;
+    max-height: 40vh;
   }
 
-  .home-img-container:hover .home-img {
+  .bloom-stage:hover .bloom-emblem {
     transform: rotateY(0deg);
   }
 
-  @media screen and (max-width: 480px) {
-    .container {
-      padding: 0 0.5rem;
-    }
-
-    header {
-      padding: 0.5rem 0.8rem;
-    }
-
-    .navbar {
-      top: 3rem;
-    }
-
-    .home-img {
-      max-height: 30vh;
-    }
-
-    .red {
-      width: 50px;
-      height: 35px;
-      transform: translate(-80%, -250%) rotate(30deg);
-    }
-
-    .orange {
-      width: 50px;
-      height: 35px;
-      transform: translate(150%, -30%) rotate(-20deg);
-    }
-
-    .pink {
-      width: 40px;
-      height: 20px;
-      transform: translate(-120%, 120%) rotate(0deg);
-    }
-
-    .home-img-container {
-      min-height: 80vh;
-    }
+  .petal-orbit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
+  .petal-1,
+  .petal-2,
+  .petal-3 {
+    position: absolute;
+  }
+
+  .petal-1 {
+    width: 70px;
+    height: 50px;
+    transform: translate(-90%, -290%) rotate(30deg);
+  }
+
+  .petal-2 {
+    width: 70px;
+    height: 50px;
+    transform: translate(170%, -50%) rotate(-20deg);
+  }
+
+  .petal-3 {
+    width: 60px;
+    height: 30px;
+    transform: translate(-150%, 150%) rotate(0deg);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  header {
+    padding: 0.5rem 0.8rem;
+  }
+
+  .navbar {
+    top: 3rem;
+  }
+
+  .bloom-emblem {
+    max-height: 30vh;
+  }
+
+  .petal-1 {
+    width: 50px;
+    height: 35px;
+    transform: translate(-80%, -250%) rotate(30deg);
+  }
+
+  .petal-2 {
+    width: 50px;
+    height: 35px;
+    transform: translate(150%, -30%) rotate(-20deg);
+  }
+
+  .petal-3 {
+    width: 40px;
+    height: 20px;
+    transform: translate(-120%, 120%) rotate(0deg);
+  }
+
+  .bloom-stage {
+    min-height: 80vh;
+  }
+}
 
 .hidden,
 [hidden] {
@@ -483,10 +440,6 @@ header {
 .clearfix::after {
   clear: both;
 }
-
-/* ==========================================================================
-   Print styles.
-   ========================================================================== */
 
 @media print {
   *,
